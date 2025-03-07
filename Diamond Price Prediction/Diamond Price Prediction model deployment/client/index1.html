@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diamond Price Estimation</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index1.html">Home</a></li>
+            <li><a href="app.html">Predict</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Welcome to Diamond Price Estimation</h1>
+        <p>
+            Diamonds are one of the most sought-after gemstones, valued for their beauty, rarity, and durability.
+            However, their prices vary significantly based on several key characteristics. To accurately estimate a diamond’s
+            price, it is essential to understand the factors that influence its value.
+        </p>
+        <p>
+            The most widely used classification system is based on the Four Cs—Carat, Cut, Color, and Clarity—which determine a
+            diamond’s appearance and desirability. In addition to these, physical measurements like depth, table percentage,
+            length, width, and height also play a crucial role in pricing.
+        </p>
+
+        <!-- Image Row -->
+        <div class="image-row">
+            <img src="images/diamond1.jpg" alt="Diamond Image 1">
+            <img src="images/diamond2.jpg" alt="Diamond Image 2">
+        </div>
+
+        <!-- Diamond Characteristics Section -->
+<div class="diamond-characteristics">
+    <h2>Diamond Characteristics</h2>
+    <ul>
+        <li><strong>Carat:</strong> Represents the weight of the diamond, which is one of the most significant factors influencing its price. One carat is equal to 1/5 g.</li>
+        <li><strong>Cut:</strong> Indicates the quality of the diamond’s cut (e.g., Fair, Good, Very Good, Premium, Ideal). The cut affects the diamond's brilliance and is an important qualitative measure.</li>
+        <li><strong>Color:</strong> Ranks the diamond's color from D (best, colorless) to J (poorest, faint yellow).</li>
+        <li><strong>Clarity:</strong> Describes the diamond's internal and external inclusions, rated from I3 (lowest) to FL (highest, flawless).</li>
+        <li><strong>Depth:</strong> Represents the height of the diamond as a percentage of its width.</li>
+        <li><strong>Table:</strong> Represents the width of the diamond's top relative to its widest point (percentage).</li>
+        <li><strong>Price:</strong> Represents the price of the diamond in US dollars, which serves as the response variable in the analysis.</li>
+        <li><strong>x, y, z:</strong> Represents the diamond's length, width, and depth dimensions, respectively, in millimeters.</li>
+    </ul>
+</div>
+
+<!-- Table Section -->
+<div class="diamond-table">
+    <h2>Diamond Measurement Variables</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Measurement</th>
+                <th>Variable in the form</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Table size / Table</td>
+                <td>Table</td>
+            </tr>
+            <tr>
+                <td>Total depth</td>
+                <td>Depth</td>
+            </tr>
+            <tr>
+                <td>Width</td>
+                <td>Width</td>
+            </tr>
+            <tr>
+                <td>Total depth / Depth</td>
+                <td>Depth</td>
+            </tr>
+            <tr>
+                <td>Star length</td>
+                <td>Length</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+        <!-- Diamond Cut Ranking -->
+<div class="diamond-ranking">
+    <h2>Diamond Cut Ranking</h2>
+    <p><strong>Order:</strong> Fair < Good < Very Good < Premium < Ideal</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Cut</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Fair</td>
+                <td>Cut allows some light to escape from the bottom or sides of the diamond.</td>
+            </tr>
+            <tr>
+                <td>Good</td>
+                <td>The diamond reflects more light than Fair but lacks optimal brilliance.</td>
+            </tr>
+            <tr>
+                <td>Very Good</td>
+                <td>A well-cut diamond that offers excellent brilliance but may fall short of perfection.</td>
+            </tr>
+            <tr>
+                <td>Premium</td>
+                <td>Near the top of the scale, with exceptional brilliance.</td>
+            </tr>
+            <tr>
+                <td>Ideal</td>
+                <td>The cut maximizes light reflection and refraction, resulting in maximum brilliance.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Diamond Color Ranking -->
+<div class="diamond-ranking">
+    <h2>Diamond Color Ranking</h2>
+    <p><strong>Order:</strong> D (Colorless - Best) < E < F < G < H < I < J (Faint Color - Worst)</p>
+</div>
+
+<!-- Diamond Clarity Ranking -->
+<div class="diamond-ranking">
+    <h2>Diamond Clarity Ranking</h2>
+    <p><strong>Order:</strong> I1 < SI2 < SI1 < VS2 < VS1 < VVS2 < VVS1 < IF</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Clarity</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>I1</td>
+                <td>Included</td>
+            </tr>
+            <tr>
+                <td>SI2</td>
+                <td>Slightly Included</td>
+            </tr>
+            <tr>
+                <td>SI1</td>
+                <td>Slightly Included</td>
+            </tr>
+            <tr>
+                <td>VS2</td>
+                <td>Very Slightly Included</td>
+            </tr>
+            <tr>
+                <td>VS1</td>
+                <td>Very Slightly Included</td>
+            </tr>
+            <tr>
+                <td>VVS2</td>
+                <td>Very, Very Slightly Included</td>
+            </tr>
+            <tr>
+                <td>VVS1</td>
+                <td>Very, Very Slightly Included</td>
+            </tr>
+            <tr>
+                <td>IF</td>
+                <td>Internally Flawless (Best)</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+        <!-- Navigation Button -->
+        <a href="app.html" class="predict-button">Go to Prediction</a>
+    </div>
+</body>
+</html>

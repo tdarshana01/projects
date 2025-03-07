@@ -1,0 +1,71 @@
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f3f4f6;
+            background-image: url('diamond_cover.jpg'); /* Add the path to your image */
+            background-size: cover;
+            background-position: center;
+        }
+        .result-container {
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for readability */
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            font-size: 1.5em;
+            color: #4CAF50;
+        }
+
+        .back-button {
+            margin-top: 20px;
+            padding: 15px 40px;
+            font-size: 1.2em;
+            background-color: #4CAF50;
+            color: white;
+            border: 2px solid transparent;
+            border-radius: 30px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: color 0.4s ease, border-color 0.4s ease;
+        }
+
+        /* Pseudo-element for background slide */
+        .back-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            z-index: 0;
+            transform: translateX(-100%);
+            transition: transform 0.4s ease;
+        }
+
+        /* Hover effect */
+        .back-button:hover::before {
+            transform: translateX(0); /* Slide white background in */
+        }
+
+        .back-button:hover {
+            color: #4CAF50; /* Green text on hover */
+            border-color: #4CAF50; /* Green border on hover */
+        }
+
+        /* Ensure text is on top */
+        .back-button span {
+            position: relative;
+            z-index: 1;
+        }

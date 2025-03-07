@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, initial-scale=1">
+    <title>Estimated Home Price</title>
+    <link rel="stylesheet" href="./static/result.css">
+</head>
+<body>
+    <div class="result-container">
+        <h1>Estimated Diamond Price</h1>
+        <p>${{ price }}</p>
+        <button class="back-button" onclick="goBack()"><span>Go Back</span></button>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
